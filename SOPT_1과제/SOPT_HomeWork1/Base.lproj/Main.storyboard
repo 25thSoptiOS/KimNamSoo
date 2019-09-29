@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6hv-1a-lKy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GQa-Rp-T1X">
+            <objects>
+                <viewController id="6hv-1a-lKy" customClass="ViewController" customModule="SOPT_1______" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uOQ-Sq-ge1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kM-kc-fxy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Soptstargram" id="iGd-ub-Vdc"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sopt" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-Sv-cbd">
+                                <rect key="frame" x="20" y="128" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2uf-6J-7K3"/>
+                                    <constraint firstAttribute="height" constant="50" id="PIr-ch-Hxy"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님이 좋아합니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyP-3L-C9R">
+                                <rect key="frame" x="188" y="611.5" width="95" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quest" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-Wi-olf">
+                                <rect key="frame" x="0.0" y="183.5" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z1h-Wi-olf" secondAttribute="height" multiplier="1:1" id="IMg-h7-Mrp"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sopt.iOS.Lover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjY-F8-cIy">
+                                <rect key="frame" x="68" y="610.5" width="112" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="aXZ-YV-qjP">
+                                <rect key="frame" x="20" y="605.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DsR-Ia-8vv"/>
+                                    <constraint firstAttribute="height" constant="30" id="kLS-ru-NZh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sopt.iOS.Lover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wQ-Ng-Lwz">
+                                <rect key="frame" x="80" y="143" width="118" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-TR-JDM">
+                                <rect key="frame" x="20" y="605.5" width="30" height="30"/>
+                                <connections>
+                                    <action selector="likeBtnClick:" destination="6hv-1a-lKy" eventType="touchUpInside" id="VVO-bI-Lgb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pz0-TR-JDM" firstAttribute="centerX" secondItem="aXZ-YV-qjP" secondAttribute="centerX" id="6F1-Oy-5wk"/>
+                            <constraint firstItem="Pz0-TR-JDM" firstAttribute="width" secondItem="aXZ-YV-qjP" secondAttribute="width" id="9qb-zW-jaf"/>
+                            <constraint firstItem="aXZ-YV-qjP" firstAttribute="top" secondItem="Z1h-Wi-olf" secondAttribute="bottom" constant="8" id="Hbk-LQ-xIO"/>
+                            <constraint firstItem="BjY-F8-cIy" firstAttribute="leading" secondItem="aXZ-YV-qjP" secondAttribute="trailing" constant="18" id="J7T-Ha-UD3"/>
+                            <constraint firstItem="2wQ-Ng-Lwz" firstAttribute="centerY" secondItem="QPG-Sv-cbd" secondAttribute="centerY" id="J9H-hU-ik3"/>
+                            <constraint firstItem="Z1h-Wi-olf" firstAttribute="top" secondItem="2wQ-Ng-Lwz" secondAttribute="bottom" constant="20" id="K7S-Zc-mri"/>
+                            <constraint firstItem="Z1h-Wi-olf" firstAttribute="leading" secondItem="GHP-XE-7Cl" secondAttribute="leading" id="Mv4-6J-yh9"/>
+                            <constraint firstItem="QPG-Sv-cbd" firstAttribute="top" secondItem="3kM-kc-fxy" secondAttribute="bottom" constant="40" id="Ozr-Um-r5u"/>
+                            <constraint firstItem="GHP-XE-7Cl" firstAttribute="trailing" secondItem="Z1h-Wi-olf" secondAttribute="trailing" id="PKa-sM-MDD"/>
+                            <constraint firstItem="QPG-Sv-cbd" firstAttribute="leading" secondItem="GHP-XE-7Cl" secondAttribute="leading" constant="20" id="QQc-Nj-Jbj"/>
+                            <constraint firstItem="BjY-F8-cIy" firstAttribute="centerY" secondItem="aXZ-YV-qjP" secondAttribute="centerY" id="RvU-do-dxZ"/>
+                            <constraint firstItem="qyP-3L-C9R" firstAttribute="leading" secondItem="BjY-F8-cIy" secondAttribute="trailing" constant="8" id="XQn-x5-yZz"/>
+                            <constraint firstItem="Pz0-TR-JDM" firstAttribute="height" secondItem="aXZ-YV-qjP" secondAttribute="height" id="YD3-UG-M0D"/>
+                            <constraint firstItem="3kM-kc-fxy" firstAttribute="top" secondItem="GHP-XE-7Cl" secondAttribute="top" id="aol-w5-Sit"/>
+                            <constraint firstItem="qyP-3L-C9R" firstAttribute="centerY" secondItem="BjY-F8-cIy" secondAttribute="centerY" id="c8b-WE-T5E"/>
+                            <constraint firstItem="Pz0-TR-JDM" firstAttribute="centerY" secondItem="aXZ-YV-qjP" secondAttribute="centerY" id="c9d-DI-r1x"/>
+                            <constraint firstItem="3kM-kc-fxy" firstAttribute="leading" secondItem="GHP-XE-7Cl" secondAttribute="leading" id="cON-ow-XT8"/>
+                            <constraint firstItem="2wQ-Ng-Lwz" firstAttribute="leading" secondItem="QPG-Sv-cbd" secondAttribute="trailing" constant="10" id="i6F-Lu-H57"/>
+                            <constraint firstItem="aXZ-YV-qjP" firstAttribute="leading" secondItem="GHP-XE-7Cl" secondAttribute="leading" constant="20" id="ryJ-fz-teY"/>
+                            <constraint firstItem="GHP-XE-7Cl" firstAttribute="trailing" secondItem="3kM-kc-fxy" secondAttribute="trailing" id="vD3-mW-liz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GHP-XE-7Cl"/>
+                    </view>
+                    <connections>
+                        <outlet property="guestImg" destination="QPG-Sv-cbd" id="Xwz-JY-7yq"/>
+                        <outlet property="heartImg" destination="aXZ-YV-qjP" id="gYo-En-Gmv"/>
+                        <outlet property="likeLabel1" destination="BjY-F8-cIy" id="XQy-Lb-Is1"/>
+                        <outlet property="likeLabel2" destination="qyP-3L-C9R" id="Rfq-fl-td9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJV-Mp-elh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="512" height="512"/>
+        <image name="quest" width="1232" height="1202"/>
+        <image name="sopt" width="294" height="184"/>
+    </resources>
+</document>

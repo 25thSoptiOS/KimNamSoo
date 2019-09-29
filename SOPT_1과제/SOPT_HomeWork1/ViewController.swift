@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  SOPT_1차과제
+//  SOPT_HomeWork1
 //
 //  Created by 남수김 on 29/09/2019.
 //  Copyright © 2019 ns. All rights reserved.
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func likeBtnClick(_ sender: Any) {
-        if like{
+        if !like{
             self.heartImg.image = UIImage(named: "like")
             self.likeLabel1.isHidden = false
             self.likeLabel2.isHidden = false
@@ -43,4 +43,3 @@ class ViewController: UIViewController {
     }
     
 }
-
