@@ -37,6 +37,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06046E4C2345C3FB00029868 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0620478C234060FC00B3D864 /* LaunchScreen.storyboard */,
+				06204787234060FC00B3D864 /* Main.storyboard */,
+				0620478A234060FC00B3D864 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		06046E4F2345C4B400029868 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				06046E502345C4CA00029868 /* ViewController */,
+				06204783234060FC00B3D864 /* SceneDelegate.swift */,
+				06204781234060FC00B3D864 /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		06046E502345C4CA00029868 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06204785234060FC00B3D864 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		06204775234060FC00B3D864 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +84,8 @@
 		06204780234060FC00B3D864 /* SOPT_HomeWork1 */ = {
 			isa = PBXGroup;
 			children = (
-				06204781234060FC00B3D864 /* AppDelegate.swift */,
-				06204783234060FC00B3D864 /* SceneDelegate.swift */,
-				06204785234060FC00B3D864 /* ViewController.swift */,
-				06204787234060FC00B3D864 /* Main.storyboard */,
-				0620478A234060FC00B3D864 /* Assets.xcassets */,
-				0620478C234060FC00B3D864 /* LaunchScreen.storyboard */,
+				06046E4F2345C4B400029868 /* Sources */,
+				06046E4C2345C3FB00029868 /* Resources */,
 				0620478F234060FC00B3D864 /* Info.plist */,
 			);
 			path = SOPT_HomeWork1;
