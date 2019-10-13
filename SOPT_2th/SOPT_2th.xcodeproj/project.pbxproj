@@ -14,6 +14,8 @@
 		06B2D77723531533004BF2A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B2D77623531533004BF2A9 /* Assets.xcassets */; };
 		06B2D77A23531533004BF2A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B2D77823531533004BF2A9 /* LaunchScreen.storyboard */; };
 		06B2D78523531904004BF2A9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D78423531904004BF2A9 /* SecondViewController.swift */; };
+		06B2D78723531EE2004BF2A9 /* DirectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D78623531EE2004BF2A9 /* DirectViewController.swift */; };
+		06B2D78923531EEA004BF2A9 /* DirectViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D78823531EEA004BF2A9 /* DirectViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		06B2D77923531533004BF2A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06B2D77B23531533004BF2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B2D78423531904004BF2A9 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		06B2D78623531EE2004BF2A9 /* DirectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewController.swift; sourceTree = "<group>"; };
+		06B2D78823531EEA004BF2A9 /* DirectViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				06B2D7712353152F004BF2A9 /* ViewController.swift */,
+				06B2D78623531EE2004BF2A9 /* DirectViewController.swift */,
+				06B2D78823531EEA004BF2A9 /* DirectViewController2.swift */,
 				06B2D78423531904004BF2A9 /* SecondViewController.swift */,
 			);
 			path = ViewController;
@@ -165,9 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B2D78923531EEA004BF2A9 /* DirectViewController2.swift in Sources */,
 				06B2D78523531904004BF2A9 /* SecondViewController.swift in Sources */,
 				06B2D7722353152F004BF2A9 /* ViewController.swift in Sources */,
 				06B2D76E2353152F004BF2A9 /* AppDelegate.swift in Sources */,
+				06B2D78723531EE2004BF2A9 /* DirectViewController.swift in Sources */,
 				06B2D7702353152F004BF2A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

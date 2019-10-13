@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //prepare을 이용한 값전달
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
