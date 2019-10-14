@@ -10,26 +10,43 @@ import UIKit
 
 class NonAutoMaticViewController: UIViewController {
 
+    var logoImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logoImageGenerate()
+        backgroundImageGenerate()
         
     }
     
     private func logoImageGenerate(){
         
-        let logoImg = UIImageView()
+        logoImg = UIImageView()
         logoImg.image = UIImage(named: "logoIEumLogin")
         logoImg.bounds.size = CGSize(width: 61, height: 61)
         self.view.addSubview(logoImg)
         
         logoImg.translatesAutoresizingMaskIntoConstraints = false
-        logoImg.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+        logoImg.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         logoImg.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 58).isActive = true
         
-       
     }
+    
+    private func backgroundImageGenerate(){
+        let backImg = UIImageView()
+        backImg.image = UIImage(named: "bgImage")
+        self.view.addSubview(backImg)
+        
+        backImg.translatesAutoresizingMaskIntoConstraints = false
+        backImg.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        backImg.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        backImg.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        backImg.topAnchor.constraint(equalTo: logoImg.bottomAnchor, constant: 35).isActive = true
+        
+     }
+    
+    
     
     private func loginButtonGenerate(object: UITextField){
         let loginBt = UIButton()
