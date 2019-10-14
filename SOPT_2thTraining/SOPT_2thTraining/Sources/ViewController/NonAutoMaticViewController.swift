@@ -20,11 +20,28 @@ class NonAutoMaticViewController: UIViewController {
         
     }
     
+    private func imgViewGenerate(imgName: String, imgSize: CGSize?) -> UIImageView{
+        
+        let imgView = UIImageView()
+        imgView.image = UIImage(named: imgName)
+        
+        if let size = imgSize{
+            imgView.bounds.size = size
+        }
+        
+        return imgView
+        
+    }
+    
     private func logoImageGenerate(){
         
+        /*
         logoImg = UIImageView()
         logoImg.image = UIImage(named: "logoIEumLogin")
         logoImg.bounds.size = CGSize(width: 61, height: 61)
+        */
+        
+        logoImg = imgViewGenerate(imgName: "logoIEumLogin", imgSize: CGSize(width: 61, height: 61))
         self.view.addSubview(logoImg)
         
         logoImg.translatesAutoresizingMaskIntoConstraints = false
@@ -34,8 +51,12 @@ class NonAutoMaticViewController: UIViewController {
     }
     
     private func backgroundImageGenerate(){
+        /*
         let backImg = UIImageView()
         backImg.image = UIImage(named: "bgImage")
+        */
+        
+        let backImg = imgViewGenerate(imgName: "bgImage", imgSize: nil)
         self.view.addSubview(backImg)
         
         backImg.translatesAutoresizingMaskIntoConstraints = false
@@ -60,8 +81,5 @@ class NonAutoMaticViewController: UIViewController {
         loginBt.leadingAnchor.constraint(equalToSystemSpacingAfter: object.leadingAnchor, multiplier: 1.0).isActive = true
         loginBt.trailingAnchor.constraint(equalToSystemSpacingAfter: object.trailingAnchor, multiplier: 1.0).isActive = true
 
-        
-        
-        
     }
 }
