@@ -14,6 +14,10 @@ class NonAutoMaticViewController: UIViewController {
     var backImg: UIImageView!
     var idLabel: UILabel!
     var idTextField: UITextField!
+    var pwLabel: UILabel!
+    var pwTextField: UITextField!
+    var loginBt: UIButton!
+    var pwLine: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +26,12 @@ class NonAutoMaticViewController: UIViewController {
         idLabelGenerate()
         idTextFieldGenerate()
         idUnderLineGenerate()
+        pwLabelGenerate()
+        pwTextFieldGenerate()
+        pwUnderLineGenerate()
+        loginButtonGenerate()
+        signUpButtonGenerate()
+        
     }
     
     

@@ -11,7 +11,7 @@ import UIKit
 
 extension NonAutoMaticViewController{
     
-    //MARK: 이미지 팩토리
+    //MARK: - Factory
     func imgViewFactory(imgName: String, imgSize: CGSize?) -> UIImageView{
         
         let imgView = UIImageView()
@@ -25,7 +25,7 @@ extension NonAutoMaticViewController{
         
     }
     
-    //MARK: 로고이미지
+    //MARK: - Generate 
     func logoImageGenerate(){
         
         /*
@@ -43,7 +43,6 @@ extension NonAutoMaticViewController{
         
     }
     
-    //MARK: 배경이미지
     func backgroundImageGenerate(){
         /*
         let backImg = UIImageView()

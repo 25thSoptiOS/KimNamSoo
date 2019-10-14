@@ -11,6 +11,7 @@ import UIKit
 
 extension NonAutoMaticViewController{
     
+    //MARK: - Factory
     func labelFactory(text: String) -> UILabel{
         let label = UILabel()
         label.text = text
@@ -19,10 +20,12 @@ extension NonAutoMaticViewController{
         return label
     }
     
+    //MARK: - Generate 
     func idLabelGenerate(){
         idLabel = labelFactory(text: "ID")
         self.view.addSubview(idLabel)
         
+        //오토레이아웃
         idLabel.translatesAutoresizingMaskIntoConstraints = false
         idLabel.topAnchor.constraint(equalTo: self.backImg.topAnchor, constant: 137).isActive = true
         idLabel.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 69).isActive = true
@@ -30,12 +33,14 @@ extension NonAutoMaticViewController{
         idLabel.widthAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
+    
     func pwLabelGenerate(){
-        var pwLabel = labelFactory(text: "PW")
+        pwLabel = labelFactory(text: "PW")
         self.view.addSubview(pwLabel)
         
+        //오토레이아웃
         pwLabel.translatesAutoresizingMaskIntoConstraints = false
-//        pwLabel.topAnchor.constraint(equalTo: , constant: ).isActive = true
+        pwLabel.topAnchor.constraint(equalTo: idTextField.bottomAnchor, constant:34 ).isActive = true
         pwLabel.leftAnchor.constraint(equalTo: idLabel.leftAnchor).isActive = true
         pwLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         pwLabel.widthAnchor.constraint(equalToConstant: 27).isActive = true
