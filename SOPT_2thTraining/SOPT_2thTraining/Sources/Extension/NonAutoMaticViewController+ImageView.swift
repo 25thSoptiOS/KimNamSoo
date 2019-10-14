@@ -12,7 +12,7 @@ import UIKit
 extension NonAutoMaticViewController{
     
     //MARK: 이미지 팩토리
-    private func imgViewGenerate(imgName: String, imgSize: CGSize?) -> UIImageView{
+    private func imgViewFactory(imgName: String, imgSize: CGSize?) -> UIImageView{
         
         let imgView = UIImageView()
         imgView.image = UIImage(named: imgName)
@@ -34,7 +34,7 @@ extension NonAutoMaticViewController{
         logoImg.bounds.size = CGSize(width: 61, height: 61)
         */
         
-        logoImg = imgViewGenerate(imgName: "logoIEumLogin", imgSize: CGSize(width: 61, height: 61))
+        logoImg = imgViewFactory(imgName: "logoIEumLogin", imgSize: CGSize(width: 61, height: 61))
         self.view.addSubview(logoImg)
         
         logoImg.translatesAutoresizingMaskIntoConstraints = false
@@ -50,7 +50,7 @@ extension NonAutoMaticViewController{
         backImg.image = UIImage(named: "bgImage")
         */
         
-        let backImg = imgViewGenerate(imgName: "bgImage", imgSize: nil)
+        let backImg = imgViewFactory(imgName: "bgImage", imgSize: nil)
         self.view.addSubview(backImg)
         
         backImg.translatesAutoresizingMaskIntoConstraints = false

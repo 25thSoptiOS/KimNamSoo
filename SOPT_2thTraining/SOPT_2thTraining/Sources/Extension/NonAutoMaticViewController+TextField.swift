@@ -7,8 +7,21 @@
 //
 
 import Foundation
-
 import UIKit
 
 extension NonAutoMaticViewController{
+    
+    private func textFieldFactory(){
+        
+    }
+    
+    private func idTextFieldGenerate(){
+        let idtext = UITextField()
+        idtext
+    }
+    
+    private func pwTextFieldGenerate(){
+        
+    }
+    
 }
