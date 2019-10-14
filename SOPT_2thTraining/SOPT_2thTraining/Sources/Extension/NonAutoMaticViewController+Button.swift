@@ -11,7 +11,7 @@ import UIKit
 
 extension NonAutoMaticViewController{
     
-    private func loginButtonGenerate(object: UITextField){
+    func loginButtonGenerate(object: UITextField){
            let loginBt = UIButton()
            
            loginBt.setTitle("Login", for: .normal)

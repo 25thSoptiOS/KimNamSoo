@@ -11,13 +11,17 @@ import UIKit
 class NonAutoMaticViewController: UIViewController {
 
     var logoImg: UIImageView!
-    
+    var backImg: UIImageView!
+    var idLabel: UILabel!
+    var idTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         logoImageGenerate()
         backgroundImageGenerate()
-        
+        idLabelGenerate()
+        idTextFieldGenerate()
+        idUnderLineGenerate()
     }
     
     

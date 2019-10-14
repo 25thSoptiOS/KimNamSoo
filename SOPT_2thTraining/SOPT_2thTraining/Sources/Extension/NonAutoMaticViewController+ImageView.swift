@@ -12,7 +12,7 @@ import UIKit
 extension NonAutoMaticViewController{
     
     //MARK: 이미지 팩토리
-    private func imgViewFactory(imgName: String, imgSize: CGSize?) -> UIImageView{
+    func imgViewFactory(imgName: String, imgSize: CGSize?) -> UIImageView{
         
         let imgView = UIImageView()
         imgView.image = UIImage(named: imgName)
@@ -26,7 +26,7 @@ extension NonAutoMaticViewController{
     }
     
     //MARK: 로고이미지
-    private func logoImageGenerate(){
+    func logoImageGenerate(){
         
         /*
         logoImg = UIImageView()
@@ -44,13 +44,13 @@ extension NonAutoMaticViewController{
     }
     
     //MARK: 배경이미지
-    private func backgroundImageGenerate(){
+    func backgroundImageGenerate(){
         /*
         let backImg = UIImageView()
         backImg.image = UIImage(named: "bgImage")
         */
         
-        let backImg = imgViewFactory(imgName: "bgImage", imgSize: nil)
+        backImg = imgViewFactory(imgName: "bgImage", imgSize: nil)
         self.view.addSubview(backImg)
         
         backImg.translatesAutoresizingMaskIntoConstraints = false
