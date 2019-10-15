@@ -144,6 +144,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="idTextFieldUpLayout" destination="o7y-C9-GnK" id="NLv-EV-9m0"/>
                         <outlet property="idtextField" destination="rP5-pV-iNv" id="jIK-0I-PUd"/>
                         <outlet property="loginButton" destination="RYB-vt-ocm" id="0tb-pZ-Jx4"/>
                         <outlet property="logoImage" destination="6uC-99-z06" id="ylm-Yb-sfk"/>
