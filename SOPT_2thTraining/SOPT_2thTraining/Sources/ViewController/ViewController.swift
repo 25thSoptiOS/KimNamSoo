@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         self.loginButton.layer.borderWidth = 1
         self.loginButton.layer.cornerRadius = 22
     }
-
+    
 }
 
 extension ViewController: UIGestureRecognizerDelegate{
