@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var idtextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -55,8 +56,66 @@ extension ViewController: UIGestureRecognizerDelegate{
            self.idtextField.resignFirstResponder()
            self.pwTextField.resignFirstResponder()
        }
-       
+    
     //MARK: - 키보드에 따른 뷰의 이동
+    // observer생성
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    //observer해제
+    func unregisterForKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // keyboard가 보여질 때 어떤 동작을 수행
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        
+        //키보드의 동작시간 얻기
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else { return }
+        
+        //키보드의 애니메이션종류 얻기
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else { return }
+        
+        //키보드의 크기 얻기
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        
+        let keyboardHeight: CGFloat // 키보드의 높이
+        
+        //iOS11이상부터는 노치가 존재하기때문에 safeArea값을 고려해야 함
+        if #available(iOS 11.0, *) {
+            keyboardHeight = keyboardFrame.cgRectValue.height - self.view.safeAreaInsets.bottom
+        } else {
+            keyboardHeight = keyboardFrame.cgRectValue.height
+        }
+        
+        // animation 함수
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            
+            self.logoImage.alpha = 0
+            
+            // +로 갈수록 y값이 내려가고 -로 갈수록 y값이 올라간다.
+            self.stackViewCenterY.constant = -keyboardHeight/2 + 50
+        })
+        
+        self.view.layoutIfNeeded()
+    }
+    
+    // keyboard가 사라질 때 어떤 동작을 수행
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        guard let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double else {return}
+        guard let curve = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {return}
+        UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
+            
+            // 원래대로 돌아가도록
+            self.logoImage.alpha = 1.0
+            self.stackViewCenterY.constant = 0
+        })
+        
+        self.view.layoutIfNeeded()
+    }
     
 }
 
