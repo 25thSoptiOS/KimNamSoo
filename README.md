@@ -40,10 +40,15 @@ __기한: ~2019.10.19__
 ### 생각할 점
     
 * ❗️코드로 AutoLayout을 구현할 시 NSLayoutConstraint를 가져와서 뷰의 이동을 설정 하는 것
-    * 대체방안으로 CGAffineTransform을 이용, 뷰하나만 적용되어 이동함( 오토레이아웃 무시하고 적용된 뷰만 이동 ) 여러 뷰를 CGAffineTransform을 이용시켜서 이동하도록함
+    * 대체방안으로 CGAffineTransform을 이용 
+    * -> 뷰하나만 적용되어 이동( 오토레이아웃 무시하고 적용된 뷰만 이동 )
+    * -> 여러 뷰에 CGAffineTransform을 적용시켜서 이동하도록함
+    
+    <br>
 
 ``` swift
-// IBOutlet 오토레이아웃을 이용해서 애니메이션을 하는경우
+// 스토리보드로 오토레이아웃을 적용한 경우
+// IBOutlet 오토레이아웃을 이용해서 애니메이션을 설정
 @IBOutlet weak var idTextFieldUpLayout: NSLayoutConstraint!
 
 UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curve), animations: {
@@ -57,7 +62,8 @@ UIView.animate(withDuration: duration, delay: 0.0, options: .init(rawValue: curv
 
 ``` 
 ``` swift
-// 코드로 오토레이아웃을 적용한 경우 뷰하나하나를 이동시키는 경우
+// 코드로 오토레이아웃을 적용한 경우
+// 이동시킬 뷰들을 하나하나 애니메이션을 설정
 UIView.animate(withDuration: duration, delay: 0 , animations: {
             
     self.logoImg.alpha = 0.0
