@@ -18,6 +18,7 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
     var pwTextField: UITextField!
     var loginBt: UIButton!
     var pwLine: UIView!
+    var idLine: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,10 +69,20 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
         UIView.animate(withDuration: duration, delay: 0 , animations: {
             
             self.logoImg.alpha = 0.0
-            // layout 줄이기
-            self.idLabel.
+            // idLabel의 NSLayoutContraint 수정하는법...?
+            
+            let trans = CGAffineTransform(translationX: 0, y: -keyboardHeight/2)
+            
+            self.idLabel.transform = trans
+            self.idTextField.transform = trans
+            self.idLine.transform = trans
+            self.pwLabel.transform = trans
+            self.pwTextField.transform = trans
+            self.pwLine.transform = trans
             
         })
+        
+        
         
     }
     
@@ -84,6 +95,12 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
                         
                         self.logoImg.alpha = 1.0
                         
+                        self.idLabel.transform = .identity
+                        self.idTextField.transform = .identity
+                        self.idLine.transform = .identity
+                        self.pwLabel.transform = .identity
+                        self.pwTextField.transform = .identity
+                        self.pwLine.transform = .identity
             
         })
     }

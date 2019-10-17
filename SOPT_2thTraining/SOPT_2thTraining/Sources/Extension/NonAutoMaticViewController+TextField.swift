@@ -42,14 +42,14 @@ extension NonAutoMaticViewController{
     
     func idUnderLineGenerate(){
         
-        let idline = lineFactory()
-        self.view.addSubview(idline)
+        idLine = lineFactory()
+        self.view.addSubview(idLine)
         
-        idline.translatesAutoresizingMaskIntoConstraints = false
-        idline.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        idline.topAnchor.constraint(equalTo: idTextField.bottomAnchor).isActive = true
-        idline.leftAnchor.constraint(equalTo: idLabel.leftAnchor).isActive = true
-        idline.rightAnchor.constraint(equalTo: idTextField.rightAnchor).isActive = true
+        idLine.translatesAutoresizingMaskIntoConstraints = false
+        idLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        idLine.topAnchor.constraint(equalTo: idTextField.bottomAnchor).isActive = true
+        idLine.leftAnchor.constraint(equalTo: idLabel.leftAnchor).isActive = true
+        idLine.rightAnchor.constraint(equalTo: idTextField.rightAnchor).isActive = true
         
     }
     
