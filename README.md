@@ -30,9 +30,9 @@ __기한: ~2019.10.04__
 __기한: ~2019.10.19__
 
 * 기능
-    * AutoLayout 적용하기 <br>
-        ✅ StoryBoard로 구현 <br>
-        ✅ Code로 구현
+    * AutoLayout 구현하기 <br>
+        ✅ StoryBoard로 AutoLayout 구현 <br>
+        ✅ Code로만 AutoLayout 구현
     * TextField클릭시 View들이 키보드의 높이에 맞춰서 위로 이동
 
 <br>
