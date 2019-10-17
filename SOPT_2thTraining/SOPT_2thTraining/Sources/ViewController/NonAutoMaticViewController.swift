@@ -19,6 +19,7 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
     var loginBt: UIButton!
     var pwLine: UIView!
     var idLine: UIView!
+    var signBt: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,8 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
             self.pwLabel.transform = trans
             self.pwTextField.transform = trans
             self.pwLine.transform = trans
+            self.signBt.transform = trans
+            self.loginBt.transform = trans
             
         })
         
@@ -101,7 +104,9 @@ class NonAutoMaticViewController: UIViewController, UITextFieldDelegate{
                         self.pwLabel.transform = .identity
                         self.pwTextField.transform = .identity
                         self.pwLine.transform = .identity
-            
+                        self.signBt.transform = .identity
+                        self.loginBt.transform = .identity
+                        
         })
     }
 }

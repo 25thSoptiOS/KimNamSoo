@@ -43,7 +43,7 @@ extension NonAutoMaticViewController{
     }
     
     func signUpButtonGenerate(){
-        let signBt = buttonFactory(title: "Sign up", isBorder: false)
+        signBt = buttonFactory(title: "Sign up", isBorder: false)
         self.view.addSubview(signBt)
         
         signBt.translatesAutoresizingMaskIntoConstraints = false
