@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         
         //MARK: - Button AutoLayout
         let bt1 = buttonFactory(title: calcul1[0], color: UIColor.gray)
+        bt1.setTitleColor(UIColor.black, for: .normal)
         let bt2 = buttonFactory(title: calcul1[1], color: UIColor.darkGray)
         let bt3 = buttonFactory(title: calcul1[2], color: UIColor.orange)
         let bt4 = buttonFactory(title: calcul1[3], color: UIColor.orange)

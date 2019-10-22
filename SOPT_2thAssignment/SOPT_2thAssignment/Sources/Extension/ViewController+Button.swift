@@ -15,7 +15,7 @@ extension ViewController{
     
         let bt = UIButton()
         bt.setTitle(title, for: .normal)
-        bt.titleLabel?.font = .systemFont(ofSize: 17)
+        bt.titleLabel?.font = .boldSystemFont(ofSize: 25)
         bt.setTitleColor(UIColor.white, for: .normal)
         bt.setTitleColor(UIColor.gray, for: .highlighted)
         bt.backgroundColor = color
