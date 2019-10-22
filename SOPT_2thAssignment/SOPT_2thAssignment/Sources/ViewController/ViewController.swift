@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     let space:CGFloat = 10
     var width:CGFloat = 0
     
+    var valueLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
@@ -83,6 +85,19 @@ class ViewController: UIViewController {
         buttonGenerate(titleSet: calcul3, stack: &row3)
         buttonGenerate(titleSet: calcul4, stack: &row4)
         
+        //MARK: - Label AutoLayout
+        valueLabel = UILabel()
+        self.view.addSubview(valueLabel)
+        valueLabel.text = "0"
+        valueLabel.textColor = UIColor.white
+        valueLabel.font = .systemFont(ofSize: 60)
+        valueLabel.textAlignment = .right
+        
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueLabel.bottomAnchor.constraint(equalTo: row4.topAnchor, constant: -20).isActive = true
+        valueLabel.rightAnchor.constraint(equalTo: row4.rightAnchor).isActive = true
+        valueLabel.sizeToFit()
+        
     }
     
     
@@ -103,8 +118,14 @@ class ViewController: UIViewController {
             bt.translatesAutoresizingMaskIntoConstraints = false
             bt.heightAnchor.constraint(equalToConstant: width).isActive = true
             bt.widthAnchor.constraint(equalToConstant: width).isActive = true
+            
+//            bt.addTarget(self, action: #selector(numButtonClick), for: .touchUpInside)
         }
     }
+    
+//    @objc func numButtonClick(_ sender: UIButton){
+//        print(sender.titleLabel?.text)
+//    }
 
 
 }
