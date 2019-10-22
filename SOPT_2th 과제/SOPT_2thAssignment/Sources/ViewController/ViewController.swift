@@ -222,8 +222,6 @@ class ViewController: UIViewController {
     }
     
     func operation(){
-       
-
         switch beforeOperType {
         case .plus:
             self.curValue = self.before + self.curValue
