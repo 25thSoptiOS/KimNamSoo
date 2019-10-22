@@ -103,6 +103,7 @@ class ViewController: UIViewController {
         valueLabel.textAlignment = .right
         
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueLabel.leftAnchor.constraint(equalTo: row4.leftAnchor, constant: 20).isActive = true
         valueLabel.bottomAnchor.constraint(equalTo: row4.topAnchor, constant: -20).isActive = true
         valueLabel.rightAnchor.constraint(equalTo: row4.rightAnchor).isActive = true
         valueLabel.sizeToFit()
@@ -175,9 +176,13 @@ class ViewController: UIViewController {
             self.operType = .div
             
         default:
+            
             guard let num = Int(command) else {return}
-            curValue = curValue*10 + num
-            self.valueLabel.text = curValue.comma
+            if curValue < 10000000 {   //Label범위를 넘어가지않도록제한
+                curValue = curValue*10 + num
+                self.valueLabel.text = curValue.comma
+            }
+           
             if self.operType != .num{
                 self.beforeOperType = self.operType
             }
