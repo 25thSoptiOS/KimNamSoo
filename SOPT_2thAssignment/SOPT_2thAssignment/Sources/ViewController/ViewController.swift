@@ -19,8 +19,14 @@ class ViewController: UIViewController {
     var width:CGFloat = 0
     
     var valueLabel:UILabel!
-    var operType = -1   // 0: +, 1: -, 2: X, 3: /
-    var value = 0
+    var operType: OperType = .none
+    var beforeOperType: OperType = .none
+    var before = 0
+    var curValue = 0
+    
+    enum OperType {
+        case plus, sub, div, multi, result, none, num
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,46 +139,103 @@ class ViewController: UIViewController {
         
         switch command {
         case "AC":
-            
+            self.curValue = 0
+            self.before = 0
+            self.valueLabel.text = "0"
+            self.operType = .none
+            self.beforeOperType = .none
+            self.valueLabel.text = "\(curValue)"
             
         case "=":
-            
+            if self.operType != .result{
+                operation()
+                before = curValue
+                self.operType = .result
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }
             
         case "+":
+            if self.operType == .none{
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }else if self.operType == .num{
+                operation()
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }
+            self.operType = .plus
             
-          
             
         case "-":
-            
+            if self.operType == .none{
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }else if self.operType == .num{
+                operation()
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }
+            self.operType = .sub
             
             
         case "X":
-          
+            if self.operType == .none{
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }else if self.operType == .num{
+                operation()
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }
+            self.operType = .multi
+            
             
         case "/":
-           
+            if self.operType == .none{
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }else if self.operType == .num{
+                operation()
+                before = curValue
+                self.valueLabel.text = "\(curValue)"
+                curValue = 0
+            }
+            self.operType = .div
+            
         default:
-            
-        
-            
+            guard let num = Int(command) else {return}
+            curValue = curValue*10 + num
+            self.valueLabel.text = "\(curValue)"
+            self.beforeOperType = self.operType
+            self.operType = .num
+           
         }
         
     }
     
-    func operation(type: Int, input: Int){
-        
-        switch type {
-        case 0:
-            self.value += input
+    func operation(){
+       
+
+        switch beforeOperType {
+        case .plus:
+            self.curValue = self.before + self.curValue
+
+        case .sub:
+            self.curValue = self.before - self.curValue
             
-        case 1:
-            self.value -= input
-            
-        case 2:
-            self.value *= input
+        case .multi:
+            self.curValue = self.before * self.curValue
         
-        case 3:
-            self.value /= input
+        case .div:
+            self.curValue = self.before / self.curValue
             
         default:
             return
