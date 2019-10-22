@@ -132,6 +132,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Calculator
     //MARK: Button Action
     @objc func numButtonClick(_ sender: UIButton){
         
@@ -144,84 +145,63 @@ class ViewController: UIViewController {
             self.valueLabel.text = "0"
             self.operType = .none
             self.beforeOperType = .none
-            self.valueLabel.text = "\(curValue)"
             
         case "=":
             if self.operType != .result{
                 operation()
                 before = curValue
                 self.operType = .result
-                self.valueLabel.text = "\(curValue)"
+                self.valueLabel.text = curValue.comma
                 curValue = 0
             }
             
         case "+":
-            if self.operType == .none{
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }else if self.operType == .num{
-                operation()
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }
+            calculator()
             self.operType = .plus
             
             
         case "-":
-            if self.operType == .none{
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }else if self.operType == .num{
-                operation()
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }
+            calculator()
             self.operType = .sub
             
             
         case "X":
-            if self.operType == .none{
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }else if self.operType == .num{
-                operation()
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }
+            calculator()
             self.operType = .multi
             
             
         case "/":
-            if self.operType == .none{
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }else if self.operType == .num{
-                operation()
-                before = curValue
-                self.valueLabel.text = "\(curValue)"
-                curValue = 0
-            }
+            calculator()
             self.operType = .div
             
         default:
             guard let num = Int(command) else {return}
             curValue = curValue*10 + num
-            self.valueLabel.text = "\(curValue)"
-            self.beforeOperType = self.operType
+            self.valueLabel.text = curValue.comma
+            if self.operType != .num{
+                self.beforeOperType = self.operType
+            }
             self.operType = .num
            
         }
         
     }
     
+    //MARK: Calculator logic
+    func calculator(){
+        if self.operType == .num{
+            operation()
+            before = curValue
+            self.valueLabel.text = curValue.comma
+            curValue = 0
+        }
+    }
+    
+    //MARK: Calculator operation
     func operation(){
+        if beforeOperType == .none {
+            beforeOperType = operType
+        }
         switch beforeOperType {
         case .plus:
             self.curValue = self.before + self.curValue
@@ -238,8 +218,21 @@ class ViewController: UIViewController {
         default:
             return
         }
+        
+        print(curValue)
     }
 
 
 }
 
+//MARK: - 숫자 3자리구분
+extension Int{
+    var comma: String {
+        let format = NumberFormatter()
+        format.numberStyle = .decimal
+        format.groupingSize = 3
+        format.groupingSeparator = ","
+        
+        return format.string(from: self as NSNumber) ?? ""
+    }
+}
