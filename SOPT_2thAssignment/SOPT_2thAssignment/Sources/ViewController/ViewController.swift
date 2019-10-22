@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     var width:CGFloat = 0
     
     var valueLabel:UILabel!
+    var operType = -1   // 0: +, 1: -, 2: X, 3: /
+    var value = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +80,7 @@ class ViewController: UIViewController {
             bt.translatesAutoresizingMaskIntoConstraints = false
             bt.heightAnchor.constraint(equalToConstant: width).isActive = true
             bt.widthAnchor.constraint(equalToConstant: width).isActive = true
+            bt.addTarget(self, action: #selector(numButtonClick), for: .touchUpInside)
         }
         
         
@@ -119,13 +122,62 @@ class ViewController: UIViewController {
             bt.heightAnchor.constraint(equalToConstant: width).isActive = true
             bt.widthAnchor.constraint(equalToConstant: width).isActive = true
             
-//            bt.addTarget(self, action: #selector(numButtonClick), for: .touchUpInside)
+            bt.addTarget(self, action: #selector(numButtonClick), for: .touchUpInside)
         }
     }
     
-//    @objc func numButtonClick(_ sender: UIButton){
-//        print(sender.titleLabel?.text)
-//    }
+    //MARK: Button Action
+    @objc func numButtonClick(_ sender: UIButton){
+        
+        guard let command = sender.titleLabel?.text else {return}
+        
+        switch command {
+        case "AC":
+            
+            
+        case "=":
+            
+            
+        case "+":
+            
+          
+            
+        case "-":
+            
+            
+            
+        case "X":
+          
+            
+        case "/":
+           
+        default:
+            
+        
+            
+        }
+        
+    }
+    
+    func operation(type: Int, input: Int){
+        
+        switch type {
+        case 0:
+            self.value += input
+            
+        case 1:
+            self.value -= input
+            
+        case 2:
+            self.value *= input
+        
+        case 3:
+            self.value /= input
+            
+        default:
+            return
+        }
+    }
 
 
 }
