@@ -10,7 +10,7 @@
 | 1차 보충세미나 | UIKit의 다양한 기능연습 | 2019.10.03 |
 | 2차 세미나 | StackView, AutoLayout | 2019.10.12 |
 | [2차 실습](#2차실습) | 로그인화면 키보드에 따른 뷰의 이동 | ~2019.10.19 |
-| 2차 과제 | 계산기 | ~2019.10.25 |
+| [2차 과제](#2차과제) | 계산기 | ~2019.10.25 |
 ***
 
 ## 1차과제
@@ -37,9 +37,9 @@ __기한: ~2019.10.19__
 
 <br>
 
-### 생각할 점
+### ❗생각할 점
     
-* ❗️코드로 AutoLayout을 구현할 시 NSLayoutConstraint를 가져와서 뷰의 이동을 설정 하는 것
+* 코드로 AutoLayout을 구현할 시 NSLayoutConstraint를 가져와서 뷰의 이동을 설정 하는 것
     * 대체방안으로 CGAffineTransform을 이용 
     * -> 뷰하나만 적용되어 이동( 오토레이아웃 무시하고 적용된 뷰만 이동 )
     * -> 여러 뷰에 CGAffineTransform을 적용시켜서 이동하도록함
@@ -83,3 +83,22 @@ UIView.animate(withDuration: duration, delay: 0 , animations: {
 ```
 <img src="./READMEImg/실습2_1.png" width="200" height="350">
 <img src="./READMEImg/실습2_2.png" width="200" height="350">
+
+***
+
+## 2차과제
+
+__기한: ~2019.10.25__
+
+* 기능
+    * 코드로만 UI구성
+    * 코드로만 AutoLayout을 적용시킨 StackView와 버튼
+    * 3자리마다 ,(콤마)생성하기
+
+### ❗생각할 점
+* 더 좋은 계산기 알고리즘
+
+
+
+<img src="./READMEImg/과제2_1.png" width="200" height="350">
+<img src="./READMEImg/과제2_2.png" width="200" height="350">
