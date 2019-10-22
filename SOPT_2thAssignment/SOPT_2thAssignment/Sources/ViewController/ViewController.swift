@@ -63,10 +63,48 @@ class ViewController: UIViewController {
         
         
         
+        //MARK: - Button AutoLayout
+        let bt1 = buttonFactory(title: calcul1[0], color: UIColor.gray)
+        let bt2 = buttonFactory(title: calcul1[1], color: UIColor.darkGray)
+        let bt3 = buttonFactory(title: calcul1[2], color: UIColor.orange)
+        let bt4 = buttonFactory(title: calcul1[3], color: UIColor.orange)
         
+        let rowBt1 = [bt1, bt2, bt3, bt4]
+        for bt in rowBt1{
+            row1.addArrangedSubview(bt)
+            bt.translatesAutoresizingMaskIntoConstraints = false
+            bt.heightAnchor.constraint(equalToConstant: width).isActive = true
+            bt.widthAnchor.constraint(equalToConstant: width).isActive = true
+        }
+        
+        
+        buttonGenerate(titleSet: calcul2, stack: &row2)
+        buttonGenerate(titleSet: calcul3, stack: &row3)
+        buttonGenerate(titleSet: calcul4, stack: &row4)
         
     }
     
     
+    //MARK: Generate Button in StackView
+    func buttonGenerate(titleSet: [String], stack: inout UIStackView){
+        for text in titleSet{
+            var color: UIColor
+            if text == titleSet[3]{
+                color = UIColor.orange
+            }else{
+                color = UIColor.darkGray
+            }
+            
+            let bt = buttonFactory(title: text, color: color)
+            stack.addArrangedSubview(bt)
+            
+            //MARK: Button AutoLayout
+            bt.translatesAutoresizingMaskIntoConstraints = false
+            bt.heightAnchor.constraint(equalToConstant: width).isActive = true
+            bt.widthAnchor.constraint(equalToConstant: width).isActive = true
+        }
+    }
+
+
 }
 
