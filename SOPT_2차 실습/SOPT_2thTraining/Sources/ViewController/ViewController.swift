@@ -110,7 +110,7 @@ extension ViewController: UIGestureRecognizerDelegate{
             //로고를 지우고, idTextField를 위로 이동시킴
             //현 originConstant = -160에서 키보드의 높이만큼 더해주면 위로 상승
             self.logoImage.alpha = 0
-            self.idTextFieldUpLayout.constant = self.originConstant + self.keyboardHeight/2
+            self.idTextFieldUpLayout.constant = self.originConstant + self.keyboardHeight/3 
             
         })
         

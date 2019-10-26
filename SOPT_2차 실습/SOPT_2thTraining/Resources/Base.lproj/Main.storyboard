@@ -128,6 +128,7 @@
                             <constraint firstItem="RYB-vt-ocm" firstAttribute="top" secondItem="fmb-QM-hZi" secondAttribute="bottom" constant="54" id="Omk-B8-FeT"/>
                             <constraint firstItem="sG1-PT-WMj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Poy-sN-3og"/>
                             <constraint firstItem="C3E-SZ-MD4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="UWI-Zb-Bex"/>
+                            <constraint firstAttribute="bottom" secondItem="sG1-PT-WMj" secondAttribute="bottom" id="ZUg-nY-bxs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoF-wr-7QG" secondAttribute="trailing" constant="68" id="aDu-R7-l74"/>
                             <constraint firstItem="fmb-QM-hZi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="hUq-7D-jrI"/>
                             <constraint firstItem="eSr-hl-NSi" firstAttribute="top" secondItem="RYB-vt-ocm" secondAttribute="bottom" constant="29" id="jrc-kG-qsK"/>
@@ -138,7 +139,6 @@
                             <constraint firstItem="MoF-wr-7QG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="r2j-Oq-RiQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSr-hl-NSi" secondAttribute="trailing" constant="68" id="vde-of-KF1"/>
                             <constraint firstItem="CiP-aS-mtJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="xh2-W4-sUp"/>
-                            <constraint firstItem="sG1-PT-WMj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yLy-aW-5Dg"/>
                             <constraint firstItem="sG1-PT-WMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zVf-CP-npZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
