@@ -170,20 +170,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-YJ-AKs">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-3g-1fD">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
+                                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wx1-3g-1fD">
+                                                <rect key="frame" x="0.0" y="44" width="375" height="209"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="209" id="uO7-yp-RLd"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2EO-zv-QkL">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2EO-zv-QkL">
                                                     <size key="itemSize" width="375" height="209"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="djF-wZ-sHu">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BannerCell" reuseIdentifier="BannerCell" id="djF-wZ-sHu" customClass="BannerCell" customModule="SOPT_2thTraining" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="51Y-ll-gfV" customClass="BannerCell" customModule="SOPT_2thTraining" customModuleProvider="target">
@@ -212,21 +212,48 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Wx1-3g-1fD" firstAttribute="leading" secondItem="sf4-YJ-AKs" secondAttribute="leading" id="2dg-Gs-Fb2"/>
+                                            <constraint firstItem="MYt-Xq-tcT" firstAttribute="top" secondItem="Wx1-3g-1fD" secondAttribute="top" id="7Sd-MH-PBH"/>
                                             <constraint firstAttribute="trailing" secondItem="Wx1-3g-1fD" secondAttribute="trailing" id="kRO-D7-Zdo"/>
-                                            <constraint firstItem="Wx1-3g-1fD" firstAttribute="top" secondItem="sf4-YJ-AKs" secondAttribute="top" id="moc-rU-KI3"/>
                                         </constraints>
+                                        <viewLayoutGuide key="safeArea" id="MYt-Xq-tcT"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="YeW-pq-pRq" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
+                                        <rect key="frame" x="300" y="200" width="74" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="inactiveTransparency">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="bottom" secondItem="QQh-JH-BXl" secondAttribute="bottom" constant="1000" id="Fmr-bz-L6Y"/>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="trailing" secondItem="QQh-JH-BXl" secondAttribute="trailing" constant="375" id="LVc-7H-Rez"/>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="top" secondItem="QQh-JH-BXl" secondAttribute="top" id="NtW-ma-19I"/>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="leading" secondItem="QQh-JH-BXl" secondAttribute="leading" id="gyx-cl-hDI"/>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="height" secondItem="SJP-hB-qq9" secondAttribute="height" priority="250" id="kNL-79-1Wp"/>
-                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="width" secondItem="SJP-hB-qq9" secondAttribute="width" id="oZL-PI-I0p"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="bottom" secondItem="Hbh-5y-unb" secondAttribute="bottom" constant="1000" id="Fmr-bz-L6Y"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="top" secondItem="YeW-pq-pRq" secondAttribute="bottom" constant="-257" id="H7W-Hi-B56"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="trailing" secondItem="Hbh-5y-unb" secondAttribute="trailing" constant="375" id="LVc-7H-Rez"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="top" secondItem="Hbh-5y-unb" secondAttribute="top" id="NtW-ma-19I"/>
+                                    <constraint firstItem="YeW-pq-pRq" firstAttribute="leading" secondItem="sf4-YJ-AKs" secondAttribute="trailing" constant="-75" id="RIO-gK-ZTZ"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="leading" secondItem="Hbh-5y-unb" secondAttribute="leading" id="gyx-cl-hDI"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="height" secondItem="Hbh-5y-unb" secondAttribute="height" priority="250" id="kNL-79-1Wp"/>
+                                    <constraint firstItem="sf4-YJ-AKs" firstAttribute="width" secondItem="Hbh-5y-unb" secondAttribute="width" id="oZL-PI-I0p"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="QQh-JH-BXl"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="SJP-hB-qq9"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -241,11 +268,27 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="bannerCV" destination="Wx1-3g-1fD" id="6c5-6O-WvM"/>
+                        <outlet property="pageControl" destination="YeW-pq-pRq" id="Wex-q9-g9A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYO-ln-zfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="854.34782608695662" y="113.83928571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f2r-Gu-PRe">
+            <objects>
+                <viewController id="HUz-7w-33a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h3z-he-R1a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="67n-lV-N5X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmo-Zv-GXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="79"/>
         </scene>
         <!--Non Auto Matic View Controller-->
         <scene sceneID="JOk-J1-Moz">
