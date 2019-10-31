@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JUc-ge-21m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yM3-o6-1Z9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -156,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="118.29085457271366"/>
         </scene>
-        <!--Banner View Controller-->
+        <!--홈-->
         <scene sceneID="Oac-HF-rSM">
             <objects>
                 <viewController id="JUc-ge-21m" customClass="BannerViewController" customModule="SOPT_2thTraining" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,6 +265,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cna-lU-IbX"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="icon01Fill" id="JAX-q0-lvB"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="bannerCV" destination="Wx1-3g-1fD" id="6c5-6O-WvM"/>
@@ -273,9 +274,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYO-ln-zfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854.34782608695662" y="113.83928571428571"/>
+            <point key="canvasLocation" x="1765.9420289855075" y="-557.14285714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--글작성-->
         <scene sceneID="f2r-Gu-PRe">
             <objects>
                 <viewController id="HUz-7w-33a" sceneMemberID="viewController">
@@ -285,10 +286,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="67n-lV-N5X"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="글작성" image="icon02Fill" id="N6q-0W-WLT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zmo-Zv-GXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="79"/>
+            <point key="canvasLocation" x="1766.6666666666667" y="117.85714285714285"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="GYl-ZD-fgi">
+            <objects>
+                <viewController id="oyU-or-Vmz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jcl-Nh-QHp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vCn-2L-xdb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="icon03Fill" id="B4h-yT-h2G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADd-Fy-0dE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.6666666666667" y="789.50892857142856"/>
         </scene>
         <!--Non Auto Matic View Controller-->
         <scene sceneID="JOk-J1-Moz">
@@ -305,9 +323,33 @@
             </objects>
             <point key="canvasLocation" x="-642" y="118"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xdR-CX-JlN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yM3-o6-1Z9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CPM-lP-6SK">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.97254901960784312" green="0.76078431372549016" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.97254901959999995" green="0.76078431369999999" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JUc-ge-21m" kind="relationship" relationship="viewControllers" id="gpp-8O-0BM"/>
+                        <segue destination="HUz-7w-33a" kind="relationship" relationship="viewControllers" id="vTm-3n-S88"/>
+                        <segue destination="oyU-or-Vmz" kind="relationship" relationship="viewControllers" id="OxZ-zG-hzP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SA0-LO-0Ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.52173913043487" y="99.107142857142847"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bgImage" width="414" height="562"/>
+        <image name="icon01Fill" width="27.5" height="27"/>
+        <image name="icon02Fill" width="27" height="29"/>
+        <image name="icon03Fill" width="26.5" height="27"/>
         <image name="logoIEumLogin" width="62.5" height="62.5"/>
         <image name="mainImage" width="414" height="209"/>
     </resources>
