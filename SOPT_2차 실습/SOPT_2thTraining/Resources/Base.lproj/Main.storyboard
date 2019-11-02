@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yM3-o6-1Z9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -35,6 +35,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ito-5O-Wao"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSr-hl-NSi">
                                 <rect key="frame" x="68" y="540" width="278" height="33"/>
@@ -145,8 +148,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="idTextField" destination="rP5-pV-iNv" id="jIK-0I-PUd"/>
                         <outlet property="idTextFieldUpLayout" destination="o7y-C9-GnK" id="NLv-EV-9m0"/>
-                        <outlet property="idtextField" destination="rP5-pV-iNv" id="jIK-0I-PUd"/>
                         <outlet property="loginButton" destination="RYB-vt-ocm" id="0tb-pZ-Jx4"/>
                         <outlet property="logoImage" destination="6uC-99-z06" id="ylm-Yb-sfk"/>
                         <outlet property="pwTextField" destination="8Wk-SY-HLO" id="D18-Uu-MT5"/>
@@ -326,9 +329,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="xdR-CX-JlN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yM3-o6-1Z9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="yM3-o6-1Z9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CPM-lP-6SK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.97254901960784312" green="0.76078431372549016" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
