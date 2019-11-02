@@ -68,7 +68,7 @@ class ViewController: UIViewController {
                 self.present(main, animated: true)
                 
             case .requestErr(let message):
-                self.simpleAlert(title: "로그인 실패", message: "\(message)")
+                self.simpleAlert(title: "로그인 실패", message: "\(message)", type: 0)
                 
             case .pathErr:
                 print(".pathErr")
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                 print(".serverErr")
                 
             case .networkFail:
-                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.")
+                self.simpleAlert(title: "로그인 실패", message: "네트워크 상태를 확인해주세요.", type: 0)
             }
         }
     }

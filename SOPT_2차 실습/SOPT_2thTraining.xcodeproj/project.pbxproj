@@ -11,6 +11,9 @@
 		06029F3C236D424400FC3865 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F3B236D424400FC3865 /* APIConstants.swift */; };
 		06029F3E236D43AE00FC3865 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F3D236D43AE00FC3865 /* LoginResult.swift */; };
 		06029F40236D448300FC3865 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F3F236D448300FC3865 /* LoginService.swift */; };
+		06029F44236D5D4700FC3865 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F43236D5D4700FC3865 /* SignUpService.swift */; };
+		06029F46236D5E2100FC3865 /* SignUpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F45236D5E2100FC3865 /* SignUpResult.swift */; };
+		06029F48236D5F9600FC3865 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06029F47236D5F9600FC3865 /* SignUpViewController.swift */; };
 		06B2D797235430E1004BF2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D796235430E1004BF2A9 /* AppDelegate.swift */; };
 		06B2D799235430E1004BF2A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D798235430E1004BF2A9 /* SceneDelegate.swift */; };
 		06B2D79B235430E1004BF2A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B2D79A235430E1004BF2A9 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		06029F3B236D424400FC3865 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		06029F3D236D43AE00FC3865 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		06029F3F236D448300FC3865 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		06029F43236D5D4700FC3865 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		06029F45236D5E2100FC3865 /* SignUpResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResult.swift; sourceTree = "<group>"; };
+		06029F47236D5F9600FC3865 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		06B2D793235430E1004BF2A9 /* SOPT_2thTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_2thTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B2D796235430E1004BF2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B2D798235430E1004BF2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 				06029F39236D417F00FC3865 /* NetworkResult.swift */,
 				06029F3B236D424400FC3865 /* APIConstants.swift */,
 				06029F3F236D448300FC3865 /* LoginService.swift */,
+				06029F43236D5D4700FC3865 /* SignUpService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				06B2D7AD23544CF3004BF2A9 /* NonAutoMaticViewController.swift */,
 				06B2D79A235430E1004BF2A9 /* ViewController.swift */,
 				06BEDB9E236421600012D989 /* BannerViewController.swift */,
+				06029F47236D5F9600FC3865 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				06BEDB9923641CDD0012D989 /* BannerCell.swift */,
 				06BEDB9C236420B80012D989 /* Banner.swift */,
 				06029F3D236D43AE00FC3865 /* LoginResult.swift */,
+				06029F45236D5E2100FC3865 /* SignUpResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,14 +309,17 @@
 				06B2D799235430E1004BF2A9 /* SceneDelegate.swift in Sources */,
 				06BEDBA3236428340012D989 /* UIViewController+AppDelegate.swift in Sources */,
 				06029F3A236D417F00FC3865 /* NetworkResult.swift in Sources */,
+				06029F48236D5F9600FC3865 /* SignUpViewController.swift in Sources */,
 				06029F40236D448300FC3865 /* LoginService.swift in Sources */,
 				06B2D7B7235476F9004BF2A9 /* NonAutoMaticViewController+Label.swift in Sources */,
 				06029F3C236D424400FC3865 /* APIConstants.swift in Sources */,
 				06BEDB9F236421600012D989 /* BannerViewController.swift in Sources */,
 				06B2D7B123547609004BF2A9 /* NonAutoMaticViewController+ImageView.swift in Sources */,
 				06BEDB9D236420B80012D989 /* Banner.swift in Sources */,
+				06029F44236D5D4700FC3865 /* SignUpService.swift in Sources */,
 				06029F3E236D43AE00FC3865 /* LoginResult.swift in Sources */,
 				06B2D7B5235476F0004BF2A9 /* NonAutoMaticViewController+Button.swift in Sources */,
+				06029F46236D5E2100FC3865 /* SignUpResult.swift in Sources */,
 				06BEDB9A23641CDD0012D989 /* BannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

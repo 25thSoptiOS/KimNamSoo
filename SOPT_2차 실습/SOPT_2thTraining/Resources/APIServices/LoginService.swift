@@ -39,7 +39,8 @@ class LoginService{
             case .success:
                 
 //                response.data
-                if let value = response.result.value {
+//                response.result.value
+                if let value = response.data {
                     if let status = response.response?.statusCode {
                         switch status {
                         case 200:
@@ -48,7 +49,7 @@ class LoginService{
                                 print("value", value)
                                 
                                 //json값
-                                let result: LoginResult = try decoder.decode(LoginResult.self, from: value as! Data)
+                                let result: LoginResult = try decoder.decode(LoginResult.self, from: value)
                                 
                                 // ResponseString에 있는 success로 분기 처리
                                 switch result.success {
