@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct LoginResult: Codable{
+    let success: Bool
+    let message: String
+    let data: UserInfo?
+    
+    struct UserInfo: Codable{
+        let userIdx: Int
+        let id, password, name, phone: String
+    }
+}

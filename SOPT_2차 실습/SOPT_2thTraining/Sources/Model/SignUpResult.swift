@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct SignUpResult: Codable {
+    let success: Bool
+    let message: String
+    let data: Int?
+}
