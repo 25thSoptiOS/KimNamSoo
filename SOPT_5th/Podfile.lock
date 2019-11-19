@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AutoInsetter (1.8.0)
+  - Pageboy (3.5.0)
+  - Tabman (2.6.3):
+    - AutoInsetter (~> 1.8.0)
+    - Pageboy (~> 3.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.2)
+  - Tabman (~> 2.6)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AutoInsetter
+    - Pageboy
+    - Tabman
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AutoInsetter: 0b90ca74e36561c340129045a3722c51a0b15c58
+  Pageboy: 3794c578aae5fcce06e90b3ed4a0ad6b807d75bb
+  Tabman: 63eae331ae7a9388ae389b1808f1939269fcdece
+
+PODFILE CHECKSUM: 5fe916ceea9f4651f523df9e4dea19cac4a77309
+
+COCOAPODS: 1.8.4
