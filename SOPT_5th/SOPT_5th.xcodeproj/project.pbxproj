@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */; };
+		06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */; };
+		06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */; };
+		06625C422385200800466461 /* BestPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C412385200800466461 /* BestPostCollectionViewCell.swift */; };
+		06625C442385209800466461 /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C432385209800466461 /* PostListTableViewCell.swift */; };
 		0674CB1F237FD7890001AD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674CB1E237FD7890001AD24 /* AppDelegate.swift */; };
 		0674CB21237FD7890001AD24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674CB20237FD7890001AD24 /* SceneDelegate.swift */; };
 		0674CB23237FD7890001AD24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674CB22237FD7890001AD24 /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostKindOfCollectionViewCell.swift; sourceTree = "<group>"; };
+		06625C412385200800466461 /* BestPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		06625C432385209800466461 /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
 		0674CB1B237FD7890001AD24 /* SOPT_5th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_5th.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0674CB1E237FD7890001AD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0674CB20237FD7890001AD24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +121,11 @@
 		0674CB35237FE2A60001AD24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */,
+				06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */,
+				06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */,
+				06625C412385200800466461 /* BestPostCollectionViewCell.swift */,
+				06625C432385209800466461 /* PostListTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,11 +270,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */,
 				0674CB23237FD7890001AD24 /* ViewController.swift in Sources */,
+				06625C422385200800466461 /* BestPostCollectionViewCell.swift in Sources */,
+				06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */,
 				06B5348C238360B60057FC09 /* NoticeFirstViewController.swift in Sources */,
 				0674CB1F237FD7890001AD24 /* AppDelegate.swift in Sources */,
 				0674CB21237FD7890001AD24 /* SceneDelegate.swift in Sources */,
 				06B534872382DA910057FC09 /* NoticeMainViewController.swift in Sources */,
+				06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */,
+				06625C442385209800466461 /* PostListTableViewCell.swift in Sources */,
 				06B5348A23835AB50057FC09 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
