@@ -29,8 +29,10 @@ __기한: ~2019.10.04__
 * 기능
     * 하트 누를시 하트가 채워지면서 글씨 나타남
 
+<div>
 <img src="./READMEImg/과제1_2.png" width="200" height="350">
 <img src="./READMEImg/과제1_1.png" width="200" height="350">
+</div>
 
 <br>
 
@@ -92,8 +94,11 @@ UIView.animate(withDuration: duration, delay: 0 , animations: {
             
 })
 ```
+
+<div>
 <img src="./READMEImg/실습2_1.png" width="200" height="350">
 <img src="./READMEImg/실습2_2.png" width="200" height="350">
+</div>
 
 <br>
 
@@ -112,9 +117,10 @@ __기한: ~2019.10.25__
 * 더 좋은 계산기 알고리즘
 
 
-
+<div>
 <img src="./READMEImg/과제2_1.png" width="200" height="350">
 <img src="./READMEImg/과제2_2.png" width="200" height="350">
+</div>
 
 <br>
 
