@@ -12,11 +12,15 @@
 | [2차 실습](#2차실습) | 로그인화면 키보드에 따른 뷰의 이동 | ~2019.10.19 |
 | [2차 과제](#2차과제) | 계산기 | ~2019.10.25 |
 | 3차 세미나 | ScrollView, PageControll, CocoaPods 사용 | 2019.10.26 | 2차 실습물에 추가 |
-| 3차 과제 | TabbarController, 세미나때 못한 실습 마무리 | 2019.11.01 | 2차 실습물에 추가 |
+| 3차 과제 | TabbarController, 세미나때 못한 실습 마무리 | ~2019.11.01 | 2차 실습물에 추가 |
 | 4차 세미나 | Alamofire사용과 통신구현 | 2019.11.02 | 2차 실습물에 추가 |
-| 4차 과제 | 회원가입통신 구현하기 | 2019.11.08 | 2차 실습물에 추가 |
+| 4차 과제 | 회원가입통신 구현하기 | ~2019.11.08 | 2차 실습물에 추가 |
+| 5차 세미나 | 디자인 합동 세미나 (에브리타임 디자인) | 2019.11.16 |  |
+| [5차 과제](#5차과제) | 디자인된 뷰를 다 작성해서오기 | ~2019.11.22 |  |
 
-***
+<br>
+
+<br>
 
 ## 1차과제
 
@@ -28,7 +32,9 @@ __기한: ~2019.10.04__
 <img src="./READMEImg/과제1_2.png" width="200" height="350">
 <img src="./READMEImg/과제1_1.png" width="200" height="350">
 
-***
+<br>
+
+<br>
 
 ## 2차실습
 
@@ -89,7 +95,9 @@ UIView.animate(withDuration: duration, delay: 0 , animations: {
 <img src="./READMEImg/실습2_1.png" width="200" height="350">
 <img src="./READMEImg/실습2_2.png" width="200" height="350">
 
-***
+<br>
+
+<br>
 
 ## 2차과제
 
@@ -107,3 +115,24 @@ __기한: ~2019.10.25__
 
 <img src="./READMEImg/과제2_1.png" width="200" height="350">
 <img src="./READMEImg/과제2_2.png" width="200" height="350">
+
+<br>
+
+<br>
+
+## 5차과제
+
+__기한: ~2019.11.22__
+
+* 디자인 합동세미나
+    * 에브리타임기반 디자인
+    
+* 기능
+    * ScrollView안에 CollectionView와 TableView적용
+    * Tab라이브러리 사용
+
+<div>
+<img src="./READMEImg/과제5_1.png" width="200" height="350">
+<img src="./READMEImg/과제5_2.png" width="200" height="350">
+<img src="./READMEImg/과제5_3.png" width="200" height="350">
+</div>
