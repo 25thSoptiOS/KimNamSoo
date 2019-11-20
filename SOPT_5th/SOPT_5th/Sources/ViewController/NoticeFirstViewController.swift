@@ -15,7 +15,7 @@ class NoticeFirstViewController: UIViewController {
     @IBOutlet weak var bestPostKindOfCollectionView: UICollectionView!
     @IBOutlet weak var bestPostCollectionView: UICollectionView!
     @IBOutlet weak var searchBar: UITextField!
-    
+    var firstBestKindSet = true  // default select
     
     let bestImgSet = ["1","2","1","2","1"]
     override func viewDidLoad() {
@@ -102,6 +102,11 @@ extension NoticeFirstViewController: UICollectionViewDataSource{
             cell.contentView.layer.borderWidth = 1
             cell.contentView.layer.cornerRadius = cell.contentView.frame.height/2
             cell.contentView.layer.borderColor = UIColor.whiteThree.cgColor
+            
+            //Default값으로 처음 버튼을 클릭한상태를 표시
+            if indexPath.item == 0 {
+                cell.backView.backgroundColor = .white
+            }
             return cell
         }
         
@@ -112,6 +117,13 @@ extension NoticeFirstViewController: UICollectionViewDataSource{
 extension NoticeFirstViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.bestPostKindOfCollectionView{
+            //Default값으로 처음 버튼을 클릭한상태를 해제
+            if self.firstBestKindSet{
+                firstBestKindSet = false
+                let firstItem = IndexPath(item: 0, section: 0)
+                guard let cell = collectionView.cellForItem(at: firstItem) as? BestPostKindOfCollectionViewCell else {return}
+                cell.backView.backgroundColor = .whiteTwo
+            }
             guard let cell = collectionView.cellForItem(at: indexPath) as? BestPostKindOfCollectionViewCell else {return}
             print("\(cell.kindOfLabel.text!) 클릭")
             cell.backView.backgroundColor = .white
