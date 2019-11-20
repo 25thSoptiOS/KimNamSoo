@@ -14,6 +14,8 @@ class PostListTableViewCell: UITableViewCell {
     @IBOutlet weak var subLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    var id = -1
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +26,16 @@ class PostListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func likeButtonClick(_ sender: UIButton) {
+        print("\(self.id) like!")
+        
+        if sender.isSelected{
+            sender.setImage(UIImage(named: "favoriteUnselectedIc"), for: .normal)
+        }else{
+            sender.setImage(UIImage(named: "favoriteSelectedIc"), for: .normal)
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
 }

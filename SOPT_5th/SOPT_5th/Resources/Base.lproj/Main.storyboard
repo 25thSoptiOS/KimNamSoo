@@ -937,7 +937,6 @@
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Apl-4J-Ghu">
                                                     <size key="itemSize" width="110" height="32"/>
-                                                    <size key="estimatedItemSize" width="110" height="32"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -988,7 +987,6 @@
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="RRA-pk-uTF">
                                                     <size key="itemSize" width="307" height="340"/>
-                                                    <size key="estimatedItemSize" width="307" height="340"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1205,18 +1203,18 @@
                                                     <action selector="makeNewPostButtonClick:" destination="pma-DK-Zy0" eventType="touchUpInside" id="cQk-WD-Hwo"/>
                                                 </connections>
                                             </button>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="taj-kW-KOR">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" estimatedRowHeight="-1" sectionHeaderHeight="15" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="taj-kW-KOR">
                                                 <rect key="frame" x="16" y="1304" width="343" height="525"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="525" id="6Dz-DI-dHW"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostListCell" rowHeight="62" id="SQU-wt-wDg" customClass="PostListTableViewCell" customModule="SOPT_5th" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="343" height="62"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostListCell" rowHeight="74" id="SQU-wt-wDg" customClass="PostListTableViewCell" customModule="SOPT_5th" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="343" height="74"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SQU-wt-wDg" id="dsn-Ya-MtP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="62"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="74"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEX-fR-Dgi">
@@ -1232,6 +1230,9 @@
                                                                         <constraint firstAttribute="width" constant="24" id="McA-JT-SJg"/>
                                                                     </constraints>
                                                                     <state key="normal" image="favoriteUnselectedIc"/>
+                                                                    <connections>
+                                                                        <action selector="likeButtonClick:" destination="SQU-wt-wDg" eventType="touchUpInside" id="z4f-ba-Y0f"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yk-Jp-twH">
                                                                     <rect key="frame" x="84" y="46.333333333333336" width="31.666666666666671" height="14.333333333333336"/>
@@ -1242,8 +1243,8 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="7Yk-Jp-twH" firstAttribute="leading" secondItem="jEX-fR-Dgi" secondAttribute="leading" id="8H8-L1-1cI"/>
-                                                                <constraint firstItem="jEX-fR-Dgi" firstAttribute="top" secondItem="dsn-Ya-MtP" secondAttribute="topMargin" constant="15" id="Da1-dx-b8s"/>
                                                                 <constraint firstItem="gY1-ff-gbM" firstAttribute="top" secondItem="dsn-Ya-MtP" secondAttribute="topMargin" constant="19" id="bGo-oc-LEb"/>
+                                                                <constraint firstItem="jEX-fR-Dgi" firstAttribute="top" secondItem="dsn-Ya-MtP" secondAttribute="topMargin" constant="15" id="rwh-Td-XBL"/>
                                                                 <constraint firstItem="gY1-ff-gbM" firstAttribute="leading" secondItem="dsn-Ya-MtP" secondAttribute="leadingMargin" constant="32" id="tYW-x7-DOe"/>
                                                                 <constraint firstItem="7Yk-Jp-twH" firstAttribute="top" secondItem="jEX-fR-Dgi" secondAttribute="bottom" constant="1" id="zFr-i6-gxB"/>
                                                                 <constraint firstItem="jEX-fR-Dgi" firstAttribute="leading" secondItem="gY1-ff-gbM" secondAttribute="trailing" constant="13" id="zKb-LV-391"/>

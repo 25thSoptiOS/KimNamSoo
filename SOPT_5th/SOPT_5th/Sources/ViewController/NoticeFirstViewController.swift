@@ -20,12 +20,23 @@ class NoticeFirstViewController: UIViewController {
     let bestImgSet = ["1","2","1","2","1"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        listUISet()
+
+    }
+    
+    func listUISet(){
         postListTableView.dataSource = self
         hotPostCollectionView.dataSource = self
         bestPostKindOfCollectionView.dataSource = self
+        bestPostKindOfCollectionView.delegate = self
         bestPostCollectionView.dataSource = self
         
+        postListTableView.layer.borderColor = UIColor.whiteThree.cgColor
+        postListTableView.layer.borderWidth = 1
+        postListTableView.layer.cornerRadius = 14
+    
     }
+    
     @IBAction func moreHotPostButtonClick(_ sender: Any) {
         print("HOT 게시판 더보기")
     }
@@ -44,6 +55,7 @@ enum CollectionType: String{
     case bestKindOf = "BestPostKindOfCell"
 }
 
+//MARK: - CollectionView
 extension NoticeFirstViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView === self.hotPostCollectionView{
@@ -68,7 +80,7 @@ extension NoticeFirstViewController: UICollectionViewDataSource{
             cell.userCotentLabel.text = "내용\(indexPath.item)"
             cell.contentView.layer.borderWidth = 1
             cell.contentView.layer.cornerRadius = 14
-            cell.contentView.layer.borderColor = UIColor.whiteTwo.cgColor
+            cell.contentView.layer.borderColor = UIColor.whiteThree.cgColor
             return cell
             
         }else if collectionView === self.bestPostCollectionView{
@@ -82,23 +94,40 @@ extension NoticeFirstViewController: UICollectionViewDataSource{
             cell.contentImgView.image = UIImage(named: bestImgSet[indexPath.item])
             cell.contentView.layer.borderWidth = 1
             cell.contentView.layer.cornerRadius = 14
-            cell.contentView.layer.borderColor = UIColor.whiteTwo.cgColor
+            cell.contentView.layer.borderColor = UIColor.whiteThree.cgColor
             return cell
         }else if collectionView === self.bestPostKindOfCollectionView{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionType.bestKindOf.rawValue, for: indexPath) as? BestPostKindOfCollectionViewCell else {fatalError("Kind Cell err")}
             cell.kindOfLabel.text = "Kind종류\(indexPath.item)"
             cell.contentView.layer.borderWidth = 1
-            cell.contentView.layer.cornerRadius = 14
-            cell.contentView.layer.borderColor = UIColor.whiteTwo.cgColor
+            cell.contentView.layer.cornerRadius = cell.contentView.frame.height/2
+            cell.contentView.layer.borderColor = UIColor.whiteThree.cgColor
             return cell
         }
         
         return UICollectionViewCell()
     }
-    
-    
 }
 
+extension NoticeFirstViewController: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.bestPostKindOfCollectionView{
+            guard let cell = collectionView.cellForItem(at: indexPath) as? BestPostKindOfCollectionViewCell else {return}
+            print("\(cell.kindOfLabel.text!) 클릭")
+            cell.backView.backgroundColor = .white
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == self.bestPostKindOfCollectionView{
+            guard let cell = collectionView.cellForItem(at: indexPath) as? BestPostKindOfCollectionViewCell else {return}
+            
+            cell.backView.backgroundColor = .whiteTwo
+        }
+    }
+}
+
+//MARK: - TableView
 extension NoticeFirstViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -108,9 +137,8 @@ extension NoticeFirstViewController: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostListCell", for: indexPath) as? PostListTableViewCell else {fatalError("PostList Cell err")}
         cell.titleLabel.text = "title \(indexPath.row)"
         cell.subLabel.text = "sub \(indexPath.row)"
-        cell.contentView.layer.borderWidth = 1
-        cell.contentView.layer.cornerRadius = 14
-        cell.contentView.layer.borderColor = UIColor.whiteTwo.cgColor
+        cell.id = indexPath.row
+        
         return cell
     }
     
