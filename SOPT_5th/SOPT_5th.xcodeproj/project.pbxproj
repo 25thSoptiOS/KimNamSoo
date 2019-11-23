@@ -13,7 +13,8 @@
 		063E9E90238917BE00BEFB92 /* HotPostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8F238917BE00BEFB92 /* HotPostResult.swift */; };
 		063E9E9223891A4F00BEFB92 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E9123891A4F00BEFB92 /* APIService.swift */; };
 		063E9E9423891AEB00BEFB92 /* BestPostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E9323891AEB00BEFB92 /* BestPostResult.swift */; };
-		063E9E9623891C9600BEFB92 /* BestKindResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E9523891C9600BEFB92 /* BestKindResult.swift */; };
+		063E9E9623891C9600BEFB92 /* PostListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E9523891C9600BEFB92 /* PostListResult.swift */; };
+		063E9E9823891F7500BEFB92 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E9723891F7500BEFB92 /* LoginService.swift */; };
 		06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */; };
 		06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */; };
 		06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */; };
@@ -38,7 +39,8 @@
 		063E9E8F238917BE00BEFB92 /* HotPostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostResult.swift; sourceTree = "<group>"; };
 		063E9E9123891A4F00BEFB92 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		063E9E9323891AEB00BEFB92 /* BestPostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostResult.swift; sourceTree = "<group>"; };
-		063E9E9523891C9600BEFB92 /* BestKindResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestKindResult.swift; sourceTree = "<group>"; };
+		063E9E9523891C9600BEFB92 /* PostListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListResult.swift; sourceTree = "<group>"; };
+		063E9E9723891F7500BEFB92 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostKindOfCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				063E9E9123891A4F00BEFB92 /* APIService.swift */,
+				063E9E9723891F7500BEFB92 /* LoginService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 				063E9E8D238913A800BEFB92 /* SchoolNewsResult.swift */,
 				063E9E8F238917BE00BEFB92 /* HotPostResult.swift */,
 				063E9E9323891AEB00BEFB92 /* BestPostResult.swift */,
-				063E9E9523891C9600BEFB92 /* BestKindResult.swift */,
+				063E9E9523891C9600BEFB92 /* PostListResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063E9E9823891F7500BEFB92 /* LoginService.swift in Sources */,
 				06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */,
 				063E9E8E238913A800BEFB92 /* SchoolNewsResult.swift in Sources */,
 				0674CB23237FD7890001AD24 /* ViewController.swift in Sources */,
@@ -315,7 +319,7 @@
 				06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */,
 				063E9E8A23890F3E00BEFB92 /* UserInfoResult.swift in Sources */,
 				06625C442385209800466461 /* PostListTableViewCell.swift in Sources */,
-				063E9E9623891C9600BEFB92 /* BestKindResult.swift in Sources */,
+				063E9E9623891C9600BEFB92 /* PostListResult.swift in Sources */,
 				06B5348A23835AB50057FC09 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
