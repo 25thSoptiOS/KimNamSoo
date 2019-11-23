@@ -10,6 +10,7 @@
 		063E9E8A23890F3E00BEFB92 /* UserInfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */; };
 		063E9E8C238910D600BEFB92 /* RealTimeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8B238910D600BEFB92 /* RealTimeResult.swift */; };
 		063E9E8E238913A800BEFB92 /* SchoolNewsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8D238913A800BEFB92 /* SchoolNewsResult.swift */; };
+		063E9E90238917BE00BEFB92 /* HotPostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8F238917BE00BEFB92 /* HotPostResult.swift */; };
 		06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */; };
 		06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */; };
 		06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */; };
@@ -31,6 +32,7 @@
 		063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResult.swift; sourceTree = "<group>"; };
 		063E9E8B238910D600BEFB92 /* RealTimeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeResult.swift; sourceTree = "<group>"; };
 		063E9E8D238913A800BEFB92 /* SchoolNewsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolNewsResult.swift; sourceTree = "<group>"; };
+		063E9E8F238917BE00BEFB92 /* HotPostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostResult.swift; sourceTree = "<group>"; };
 		06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostKindOfCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */,
 				063E9E8B238910D600BEFB92 /* RealTimeResult.swift */,
 				063E9E8D238913A800BEFB92 /* SchoolNewsResult.swift */,
+				063E9E8F238917BE00BEFB92 /* HotPostResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				063E9E8E238913A800BEFB92 /* SchoolNewsResult.swift in Sources */,
 				0674CB23237FD7890001AD24 /* ViewController.swift in Sources */,
 				06625C422385200800466461 /* BestPostCollectionViewCell.swift in Sources */,
+				063E9E90238917BE00BEFB92 /* HotPostResult.swift in Sources */,
 				06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */,
 				06B5348C238360B60057FC09 /* NoticeFirstViewController.swift in Sources */,
 				0674CB1F237FD7890001AD24 /* AppDelegate.swift in Sources */,
