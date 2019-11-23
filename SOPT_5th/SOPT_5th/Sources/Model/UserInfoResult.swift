@@ -35,14 +35,14 @@ struct UserInfo: Codable{
         let commentCount: Int
         let scrapCount: Int
         let userImage: String
-    }
-    
-    enum Codingkeys: String, CodingKey{
-        case userName = "user_name"
-        case userUniv = "user_univ"
-        case postingCount = "posting_count"
-        case commentCount = "comment_count"
-        case scrapCount = "scrap_count"
-        case userImage = "user_image"
+        
+        enum Codingkeys: String, CodingKey{
+               case userName = "user_name"
+               case userUniv = "user_univ"
+               case postingCount = "posting_count"
+               case commentCount = "comment_count"
+               case scrapCount = "scrap_count"
+               case userImage = "user_image"
+           }
     }
 }
