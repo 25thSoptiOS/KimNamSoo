@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063E9E8A23890F3E00BEFB92 /* UserInfoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */; };
+		063E9E8C238910D600BEFB92 /* RealTimeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E9E8B238910D600BEFB92 /* RealTimeResult.swift */; };
 		06625C3C2384EEB900466461 /* RealTimePopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */; };
 		06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */; };
 		06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResult.swift; sourceTree = "<group>"; };
+		063E9E8B238910D600BEFB92 /* RealTimeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeResult.swift; sourceTree = "<group>"; };
 		06625C3B2384EEB900466461 /* RealTimePopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimePopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3D23851EBC00466461 /* HotPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostKindOfCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -58,6 +62,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063E9E8823890E8B00BEFB92 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
 		0674CB12237FD7890001AD24 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +112,7 @@
 		0674CB33237FD7FD0001AD24 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				063E9E8823890E8B00BEFB92 /* APIService */,
 				0674CB24237FD7890001AD24 /* Main.storyboard */,
 				0674CB27237FD78C0001AD24 /* Assets.xcassets */,
 				0674CB29237FD78C0001AD24 /* LaunchScreen.storyboard */,
@@ -126,6 +138,8 @@
 				06625C3F23851FA300466461 /* BestPostKindOfCollectionViewCell.swift */,
 				06625C412385200800466461 /* BestPostCollectionViewCell.swift */,
 				06625C432385209800466461 /* PostListTableViewCell.swift */,
+				063E9E8923890F3E00BEFB92 /* UserInfoResult.swift */,
+				063E9E8B238910D600BEFB92 /* RealTimeResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,9 +290,11 @@
 				06625C3E23851EBC00466461 /* HotPostCollectionViewCell.swift in Sources */,
 				06B5348C238360B60057FC09 /* NoticeFirstViewController.swift in Sources */,
 				0674CB1F237FD7890001AD24 /* AppDelegate.swift in Sources */,
+				063E9E8C238910D600BEFB92 /* RealTimeResult.swift in Sources */,
 				0674CB21237FD7890001AD24 /* SceneDelegate.swift in Sources */,
 				06B534872382DA910057FC09 /* NoticeMainViewController.swift in Sources */,
 				06625C4023851FA300466461 /* BestPostKindOfCollectionViewCell.swift in Sources */,
+				063E9E8A23890F3E00BEFB92 /* UserInfoResult.swift in Sources */,
 				06625C442385209800466461 /* PostListTableViewCell.swift in Sources */,
 				06B5348A23835AB50057FC09 /* UIColor+Extension.swift in Sources */,
 			);
