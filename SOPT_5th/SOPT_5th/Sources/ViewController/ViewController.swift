@@ -16,11 +16,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var userCommentNumLabel: UILabel!
     @IBOutlet weak var userScrapNumLabel: UILabel!
     @IBOutlet weak var realTimeCollectionView: UICollectionView!
+    @IBOutlet weak var userImgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         realTimeCollectionView.dataSource = self
         
+        LoginService.shared.getLoginResult(){
+            response in
+            guard let data = response.data else{return}
+            
+            self.userNameLabel.text = data.userName
+            self.userUniversityLabel.text = data.userUniv
+            self.userWritePostNumLabel.text = "\(data.postingCount)"
+            self.userCommentNumLabel.text = "\(data.commentCount)"
+            self.userScrapNumLabel.text = "\(data.scrapCount)"
+            
+            guard let imgURL = URL(string: data.userImage) else {return}
+            do{
+                let imgData = try Data(contentsOf: imgURL)
+                self.userImgView.image = UIImage(data: imgData)
+            }
+            catch{
+                print("err")
+            }
+        }
         
     }
     @IBAction func moreBookMarkButtonClick(_ sender: Any) {
@@ -32,7 +52,6 @@ class ViewController: UIViewController {
     @IBAction func moreSchoolNewButtonClick(_ sender: Any) {
         print("교내소식 더보기")
     }
-    
     
 }
 

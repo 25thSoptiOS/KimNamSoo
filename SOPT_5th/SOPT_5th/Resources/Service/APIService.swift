@@ -10,12 +10,12 @@ import Foundation
 
 struct APIService{
     
-    private let baseURL = ""
+    private static let baseURL = "http://13.124.134.215:4000"
     
-    static let loginURL = " /auth/users/info"
-    static let realTiemPostURL = "/boards/popular"
-    static let schoolPoistURL = "/univ/news"
-    static let hotPostURL = "/boards/hot"
-    static let bestPostURL = "/boards/best/season/"
-    static let postListURL = "/favorites/board"
+    static let loginURL = baseURL+"/auth/users/info"
+    static let realTiemPostURL = baseURL+"/boards/popular"
+    static let schoolPoistURL = baseURL+"/univ/news"
+    static let hotPostURL = baseURL+"/boards/hot"
+    static let bestPostURL = baseURL+"/boards/best/season/"
+    static let postListURL = baseURL+"/favorites/board"
 }

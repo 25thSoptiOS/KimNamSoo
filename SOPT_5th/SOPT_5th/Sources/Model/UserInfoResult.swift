@@ -36,7 +36,7 @@ struct UserInfo: Codable{
         let scrapCount: Int
         let userImage: String
         
-        enum Codingkeys: String, CodingKey{
+        enum CodingKeys: String, CodingKey{
                case userName = "user_name"
                case userUniv = "user_univ"
                case postingCount = "posting_count"
