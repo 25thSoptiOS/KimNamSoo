@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var userScrapNumLabel: UILabel!
     @IBOutlet weak var realTimeCollectionView: UICollectionView!
     @IBOutlet weak var userImgView: UIImageView!
+    @IBOutlet weak var realTimePostCollectionView: UICollectionView!
+    
+    var realTimePost = [RealTimeResult.RealTimeData]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +45,13 @@ class ViewController: UIViewController {
             }
         }
         
+        RealTimeService.shared.getRealTimePostResult(){
+            response in
+            
+            self.realTimePost = response ?? [RealTimeResult.RealTimeData]()
+            self.realTimeCollectionView.reloadData()
+        }
+        
     }
     @IBAction func moreBookMarkButtonClick(_ sender: Any) {
         print("즐겨찾는 게시판 더보기")
@@ -58,20 +68,22 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return realTimePost.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if realTimeCollectionView === collectionView{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RealTimeCell", for: indexPath) as? RealTimePopularCollectionViewCell else {fatalError("RealTime cell err")}
+//
+//            cell.kindOfWriteLabel.text = "RealTime종류\(indexPath.item)"
+//            cell.userNameLabel.text = "사용자\(indexPath.item)"
+//            cell.dateLabel.text = "날짜\(indexPath.item)"
+//            cell.commentNumLabel.text = "\(indexPath.item)"
+//            cell.goodNumLabel.text = "\(indexPath.item)"
+//            cell.userCotentLabel.text = "내용\(indexPath.item)"
             
-            cell.kindOfWriteLabel.text = "RealTime종류\(indexPath.item)"
-            cell.userNameLabel.text = "사용자\(indexPath.item)"
-            cell.dateLabel.text = "날짜\(indexPath.item)"
-            cell.commentNumLabel.text = "\(indexPath.item)"
-            cell.goodNumLabel.text = "\(indexPath.item)"
-            cell.userCotentLabel.text = "내용\(indexPath.item)"
+//            cell.post = cellData넣기
             cell.contentView.layer.borderWidth = 1
             cell.contentView.layer.cornerRadius = 14
             cell.contentView.layer.borderColor = UIColor.whiteTwo.cgColor

@@ -645,6 +645,7 @@
                     <tabBarItem key="tabBarItem" title="" image="tab1" selectedImage="tab1" id="vs0-ea-bwf"/>
                     <connections>
                         <outlet property="realTimeCollectionView" destination="PwA-Ar-8zb" id="UDg-kz-T1h"/>
+                        <outlet property="realTimePostCollectionView" destination="PwA-Ar-8zb" id="qmo-4o-qmG"/>
                         <outlet property="userCommentNumLabel" destination="EQP-N8-Q73" id="3ua-SV-EVS"/>
                         <outlet property="userImgView" destination="wSv-8T-Tlg" id="XA0-BQ-546"/>
                         <outlet property="userNameLabel" destination="lvV-9t-8OE" id="jYd-wP-Xzu"/>
