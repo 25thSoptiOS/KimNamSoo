@@ -38,8 +38,10 @@ class ViewController: UIViewController {
     
     @IBAction func editButtonClick(_ sender: UIBarButtonItem) {
         if musicTable.isEditing {
+            self.editButton.title = "Edit"
             self.musicTable.setEditing(false, animated: true)
         }else{
+            self.editButton.title = "Done"
             self.musicTable.setEditing(true, animated: true)
         }
     }
