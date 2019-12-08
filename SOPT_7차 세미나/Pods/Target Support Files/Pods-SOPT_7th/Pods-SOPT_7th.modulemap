@@ -1,0 +1,6 @@
+framework module Pods_SOPT_7th {
+  umbrella header "Pods-SOPT_7th-umbrella.h"
+
+  export *
+  module * { export * }
+}
