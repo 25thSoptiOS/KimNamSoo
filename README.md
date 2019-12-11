@@ -18,6 +18,8 @@
 | 5차 세미나 | 디자인 합동 세미나 (에브리타임 디자인) | 2019.11.16 |  |
 | [5차 과제](#5차과제) | 디자인된 뷰를 다 작성해서오기 | ~2019.11.22 |  |
 | 6차 세미나 |  서버 합동 세미나, 통신 필요한부분 모델만들고 통신받기 | 2019.11.23 | 5차 과제물에 추가 |
+| [7차 보충세미나](#7차보충세미나) | TableView, Tabbar | 2019.12.06 | |
+| [7차세미나](#7차세미나) | FaceBook 소셜로그인 | 2019.12.07 | |
 
 <br>
 
@@ -138,11 +140,95 @@ __기한: ~2019.11.22__
     * ScrollView안에 CollectionView와 TableView적용
     * Tab라이브러리 사용
 
+<br>
+
 <div>
 <img src="./READMEImg/과제5_1.png" width="200" height="350">
 <img src="./READMEImg/과제5_2.png" width="200" height="350">
 <img src="./READMEImg/과제5_3.png" width="200" height="350">
 </div>
 
+<br>
 
+<br>
+
+## 7차보충세미나
+
+__기한: ~2019.12.06__
+
+
+
+> TableView
+
+* Static
+  * Section과 Row를 설정가능
+    * 같은 모양의 뷰를 짜는데 최적화
+  * TableViewController를 이용해서만 사용가능
+    * ContainerView를 이용해서 뷰에 포함시킬 수 있음
+* Dynamic
+  * 커스텀한 모양의 뷰를 짜는데 최적화
+
+
+
+``` swift
+ override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+       //리스트의 선택된 상태를 해제해주는 코드
+        if let index = musicTable.indexPathForSelectedRow {
+            musicTable.deselectRow(at: index, animated: true)
+        }
+    }
+```
+
+<br>
+
+> Tabbar
+
+``` swift
+UITabBar().tintColor    //클릭시 텝바 색변경
+UITabBar().unselectedItemTintColor    //선택되지않은 탭바 색변경
+```
+
+<br>
+
+<div>
+<img src="./READMEImg/보충7_1.png" width="200" height="350">
+<img src="./READMEImg/보충7_2.png" width="200" height="350">
+<img src="./READMEImg/보충7_3.png" width="200" height="350">
+</div>
+
+<br>
+
+<br>
+
+## 7차세미나
+
+__기한: ~2019.12.07__
+
+
+
+> 페이스북 로그인 AppDelegate추가
+
+``` swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        return true
+}
+```
+
+``` swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let handled = ApplicationDelegate.shared.application(app, open: url, sourceApplication: (options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String), annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        return handled
+}
+```
+
+<br>
+
+<div>
+<img src="./READMEImg/세미나7_1.png" width="200" height="350">
+<img src="./READMEImg/세미나7_2.png" width="200" height="350">
+</div>
 
